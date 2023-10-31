@@ -109,15 +109,15 @@ WORKDIR Viper-produce
 
 RUN echo "*******************Viper for $CHIP PRODUCER**********************"
 
-RUN if [ "$CHIP" == "ARM32" ] ; \
+RUN if [ "$CHIP" = "ARM32" ] ; \
   then \
   unzip transactionalmachinelearning/ARM-Chipset/MAADS-VIPER\ *\ Linux\ ARM.zip && \
   chmod 755 viper-linux-arm ; \
-elif [ "$CHIP" ==  "ARM64" ] ; \
+elif [ "$CHIP" =  "ARM64" ] ; \
   then \
   unzip transactionalmachinelearning/ARM64-Chipset/MAADS-VIPER\ *\ Linux\ ARM64.zip && \
   chmod 755 viper-linux-arm64 ; \
-elif [ "$CHIP" == "AMD64" ] ; \
+elif [ "$CHIP" = "AMD64" ] ; \
   then \
   unzip transactionalmachinelearning/MAADS-VIPER\ *\ Linux\ AMD64.zip && \
   chmod 755 viper-linux-amd64 ; \ 
